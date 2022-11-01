@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "./index.js",
   "scripts": {
-    "install-svc": "qckwinsvc --name \"Ferdico sync\" --description \"Sincronizzazione file quantities da locale a sito web\" --script \"$INIT_CWD/index.js\" --startImmediately",
+    "install-svc": "qckwinsvc --name \"Ftp Transfer watcher\" --description \"Sync your files to FTP\" --script \"$INIT_CWD/index.js\" --startImmediately",
     "config": "npx . --config"
   },
   "author": "Marco Ingraiti",
