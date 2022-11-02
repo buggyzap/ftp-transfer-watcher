@@ -8,23 +8,28 @@ Any thirdy part integrations that require a file synchronization between local c
 
 ## Workflow
 
-- Start configuration Wizard with `npm run config`
-- Start manually or run `npm run install-svc` to install a Windows Service (automatically start with OS)
+- Start configuration Wizard with `npx ftp-transfer-watcher --config`
+- Start manually with ``npx ftp-transfer-watcher --watch` or run `npx ftp-transfer-watcher --install_service` to install a Windows Service (automatically start with OS)
 - After any changes in `source` directory, files has been transferred to FTP and copied to local backup
 
 ## Commands
 
-- `npm run config`: Start configuration Wizard and create config.js
-- `npm run install-svc`: Install Windows Service
-- `npx .` : Start watcher
+- `npx ftp-transfer-watcher --config`: Start configuration Wizard and create config.js
+- `npx ftp-transfer-watcher --install_service`: Install Windows Service
+- `npx ftp-transfer-watcher --uninstall_service`: Uninstall Windows Service
+- `npx ftp-transfer-watcher --watch` : Start watcher
 
 ## Requirements
 
-This package require node.js 14.x or higher
+This package require node.js 14.x or higher and Git
 
 ## How to install
 
 ```
-npm i ftp-transfer-watcher
-npm run config
+git clone https://github.com/buggyzap/ftp-transfer-watcher.git
+npm install
+# config
+npx ftp-transfer-watcher --config
+# start watcher
+npx ftp-transfer-watcher --watch
 ```
