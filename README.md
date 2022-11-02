@@ -2,6 +2,20 @@
 
 A module that let you create a daemon watcher that listen changes in given directory ( after wizard configuration ), create a files backup, transfer to given FTP and delete.
 
+## Requirements
+
+This package require node.js 14.x or higher and Git ( or you have to download source manually )
+
+## How to install
+
+```
+git clone https://github.com/buggyzap/ftp-transfer-watcher.git; cd ftp-transfer-watcher; npm install;
+# config
+npx . --config
+# start watcher
+npx . --watch
+```
+
 ## Use cases
 
 Any thirdy part integrations that require a file synchronization between local computer and server, or server to server.
@@ -19,16 +33,4 @@ Any thirdy part integrations that require a file synchronization between local c
 - `npx . --uninstall_service`: Uninstall Windows Service
 - `npx . --watch` : Start watcher
 
-## Requirements
 
-This package require node.js 14.x or higher and Git
-
-## How to install
-
-```
-git clone https://github.com/buggyzap/ftp-transfer-watcher.git; cd ftp-transfer-watcher; npm install;
-# config
-npx . --config
-# start watcher
-npx . --watch
-```
