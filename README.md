@@ -26,8 +26,7 @@ This package require node.js 14.x or higher and Git
 ## How to install
 
 ```
-git clone https://github.com/buggyzap/ftp-transfer-watcher.git
-npm install
+git clone https://github.com/buggyzap/ftp-transfer-watcher.git && cd ftp-transfer-watcher && npm install
 # config
 npx ftp-transfer-watcher --config
 # start watcher
