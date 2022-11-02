@@ -42,12 +42,12 @@ const askConfig = async () => {
     {
       type: "input",
       name: "source",
-      message: "Source Directory full path",
+      message: "Source Directory full path (use '/' as directory separator)",
     },
     {
       type: "input",
       name: "backup",
-      message: "Backup Directory full path",
+      message: "Backup Directory full path (use '/' as directory separator)",
     },
   ]);
   const secure = response.secure === "SFTP";
@@ -69,7 +69,6 @@ export const config = {
 
 const send_files = async () => {
   const client = new ftp.Client();
-  const source = config.source.replace("\\", "/");
   client.ftp.verbose = true;
   try {
     await client.access({
@@ -78,7 +77,7 @@ const send_files = async () => {
       password: config.password,
       secure: config.secure === "SFTP",
     });
-    await client.uploadFromDir(source);
+    await client.uploadFromDir(config.source);
   } catch (err) {
     console.log(err);
   }
@@ -97,13 +96,11 @@ const invalidConfig = () => {
 
 const startWatch = () => {
   console.log("Started...");
-  const source = config.source.replace("\\", "/");
-  const backup = config.backup.replace("\\", "/");
-  watch(source, async () => {
+  watch(config.source, async () => {
     await setTimeout(async () => {
       await send_files();
-      await fs.copy(source, backup);
-      await fs.emptyDir(source);
+      await fs.copy(config.source, config.backup);
+      await fs.emptyDir(config.source);
     }, 3000);
   });
 };
