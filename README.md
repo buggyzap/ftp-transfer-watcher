@@ -9,7 +9,7 @@ Any thirdy part integrations that require a file synchronization between local c
 ## Workflow
 
 - Start configuration Wizard with `npx ftp-transfer-watcher --config`
-- Start manually with ``npx ftp-transfer-watcher --watch` or run `npx ftp-transfer-watcher --install_service` to install a Windows Service (automatically start with OS)
+- Start manually with `npx ftp-transfer-watcher --watch` or run `npx ftp-transfer-watcher --install_service` to install a Windows Service (automatically start with OS)
 - After any changes in `source` directory, files has been transferred to FTP and copied to local backup
 
 ## Commands
