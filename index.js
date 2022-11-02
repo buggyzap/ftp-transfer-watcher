@@ -143,7 +143,7 @@ const main = async () => {
   if (args.config || invalidConfig()) {
     await askConfig();
   }
-  if (args.watch) startWatch();
+  startWatch();
 };
 
 main();
