@@ -1,6 +1,6 @@
 {
   "name": "ftp-transfer-watcher",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A module that let you create a daemon watcher that listen changes in given directory ( after wizard configuration ), create a files backup, transfer to given FTP and delete them",
   "main": "index.js",
   "bin": "./index.js",
