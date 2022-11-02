@@ -8,6 +8,16 @@
     "install-svc": "qckwinsvc --name \"Ftp Transfer watcher\" --description \"Sync your files to FTP\" --script \"$INIT_CWD/index.js\" --startImmediately",
     "config": "npx . --config"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buggyzap/ftp-transfer-watcher"
+  },
+  "keywords": [
+    "ftp transfer",
+    "node ftp transfer",
+    "ftp watcher changes",
+    "ftp watcher"
+  ],
   "author": "Marco Ingraiti",
   "license": "ISC",
   "type": "module",
